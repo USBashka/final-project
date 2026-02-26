@@ -5,5 +5,20 @@ platforms = ["win-64"]
 version = "0.1.0"
 
 [tasks]
+dev = "uvicorn src.main:app --reload"
 
 [dependencies]
+python = ">=3.12"
+
+[pypi-dependencies]
+fastapi = ">=0.115"
+uvicorn = { version = ">=0.34", extras = ["standard"] }
+sqlalchemy = ">=2.0"
+alembic = ">=1.14"
+pydantic = ">=2.10"
+pydantic-settings = ">=2.7"
+fastapi-users = { version = ">=14.0", extras = ["sqlalchemy"] }
+sqladmin = ">=0.20"
+jinja2 = ">=3.1"
+aiosqlite = ">=0.20"
+asyncpg = ">=0.30"
